@@ -139,6 +139,19 @@
   확인했음 (400x200px, 200KB 이하 조건도 있음). 같은 텍스트/폰트, 흰 배경만 다름.
 - 텍스트나 폰트를 바꿀 땐 **두 파일 다** 업데이트할 것.
 
+## 뚜뚜 캐릭터 (블로그 마스코트)
+사진(거즈 수건을 후드처럼 뒤집어쓰고 주먹 빼꼼 내민 모습)을 바탕으로 그린 벡터
+캐릭터. 생성 스크립트는 `scripts/ddudu_character.py` (SVG → cairosvg로 PNG 저장).
+
+- `assets/ddudu_character.png` — 기본형(800x800, 크림 `#FFF8F0` 배경). 포스트 삽입용.
+- `assets/ddudu_character_transparent.png` — 투명 배경(RGBA). 사진 위 합성용.
+- `assets/ddudu_character_profile.png` — 원형 프로필 아이콘(600x600, 얼굴 확대).
+- `assets/ddudu_character.svg` — 벡터 원본.
+- 표정/포즈를 바꾸거나 다른 버전이 필요하면 스크립트 상단의 팔레트·기준 좌표
+  (`HOOD`/`FACE`/`COLLAR`/`HAND`)를 조정해서 다시 실행. 색은 블로그 파스텔 팔레트와
+  동일 계열 유지.
+- 네이버 "서명" 업로드에 쓸 거면 워터마크와 같은 이유로 **불투명 배경 버전**을 쓸 것.
+
 ## 인포그래픽 고정 템플릿 (v3 — 카드형 비교 + 참고표)
 사용자가 "인포그래픽 만들어줘"라고 하면, 아래 스타일을 그대로 재사용할 것
 (참고 원본: `assets/sleep_infographic_month1.png`, `assets/sleep_infographic_month2.png`,

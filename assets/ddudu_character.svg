@@ -1,0 +1,239 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <clipPath id="faceClip">
+      <ellipse cx="400" cy="442" rx="172" ry="182"/>
+    </clipPath>
+    <clipPath id="hoodClip">
+      <ellipse cx="400" cy="415" rx="258" ry="270"/>
+    </clipPath>
+    <clipPath id="canvasClip">
+      <rect x="0" y="0" width="800" height="800"/>
+    </clipPath>
+    <!-- 후드가 얼굴에 드리우는 부드러운 그늘 -->
+    <radialGradient id="faceShade" cx="0.5" cy="0.45" r="0.62">
+      <stop offset="0.55" stop-color="#F3CCB4" stop-opacity="0"/>
+      <stop offset="1" stop-color="#F3CCB4" stop-opacity="0.55"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="800" fill="#FFF8F0"/><circle cx="400" cy="430" r="330" fill="#FDEDF0" opacity="0.55"/>
+
+  <g clip-path="url(#canvasClip)">
+
+    <!-- 몸통(감싼 담요) -->
+    <path d="M 138 800 C 138 660, 250 578, 400 578
+             C 550 578, 662 660, 662 800 Z" fill="#FCF5E9"/>
+    <path d="M 138 800 C 138 660, 250 578, 400 578
+             C 330 616, 268 700, 252 800 Z" fill="#F1E5D2" opacity="0.55"/>
+
+    <!-- 후드(머리에 두른 거즈) -->
+    <ellipse cx="400" cy="415" rx="258" ry="270" fill="#F1E5D2"/>
+    <ellipse cx="392" cy="407" rx="245" ry="257" fill="#FCF5E9"/>
+
+    <!-- 후드 접힘선 -->
+    <g clip-path="url(#hoodClip)" fill="none" stroke="#E9DAC2" stroke-width="4.5"
+       stroke-linecap="round" opacity="0.75">
+      <path d="M 214 300 C 268 214, 352 176, 432 178"/>
+      <path d="M 186 392 C 218 300, 300 232, 396 218"/>
+      <path d="M 592 300 C 556 232, 486 190, 424 182"/>
+      <path d="M 618 400 C 606 306, 540 236, 452 214"/>
+      <path d="M 200 486 C 176 424, 180 356, 196 314"/>
+    </g>
+
+    <!-- 얼굴 -->
+    <ellipse cx="400" cy="442" rx="172" ry="182" fill="#FBE0CD"/>
+    <g clip-path="url(#faceClip)">
+      <!-- 후드가 드리운 부드러운 그늘 (얼굴 가장자리) -->
+      <ellipse cx="400" cy="442" rx="172" ry="182" fill="url(#faceShade)"/>
+      <!-- 후드 아래 살짝 보이는 배냇머리 -->
+      <path d="M 236 336 C 262 258, 322 224, 400 226 C 478 228, 540 262, 566 340
+               C 528 288, 476 268, 428 276 C 396 282, 372 296, 340 292
+               C 300 288, 264 302, 236 336 Z"
+            fill="#4B3A31" opacity="0.9"/>
+      <path d="M 300 292 C 282 276, 268 272, 252 276" fill="none" stroke="#4B3A31"
+            stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+      <path d="M 500 286 C 520 272, 536 272, 550 280" fill="none" stroke="#4B3A31"
+            stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+    </g>
+
+    <!-- 턱 아래로 감싼 천 -->
+    <ellipse cx="400" cy="706" rx="236" ry="118" fill="#FCF5E9"/>
+    <path d="M 176 664 C 258 622, 542 622, 624 664 C 540 674, 260 674, 176 664 Z"
+          fill="#F1E5D2" opacity="0.7"/>
+    <path d="M 210 692 C 296 646, 504 646, 590 692" fill="none" stroke="#E9DAC2"
+          stroke-width="4.5" stroke-linecap="round" opacity="0.55"/>
+    <path d="M 256 742 C 330 706, 470 706, 544 742" fill="none" stroke="#E9DAC2"
+          stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+
+    <!-- 눈썹 -->
+    <path d="M 288 380 C 306 366, 336 364, 352 372" fill="none" stroke="#8A6B58"
+          stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+    <path d="M 448 372 C 466 364, 496 366, 512 380" fill="none" stroke="#8A6B58"
+          stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+
+    <!-- 눈 -->
+    <ellipse cx="322" cy="440" rx="34" ry="40" fill="#3A2B24"/>
+    <ellipse cx="478" cy="440" rx="34" ry="40" fill="#3A2B24"/>
+    <circle cx="311" cy="426" r="11.5" fill="#FFFFFF" opacity="0.95"/>
+    <circle cx="467" cy="426" r="11.5" fill="#FFFFFF" opacity="0.95"/>
+    <circle cx="332" cy="456" r="5" fill="#FFFFFF" opacity="0.5"/>
+    <circle cx="488" cy="456" r="5" fill="#FFFFFF" opacity="0.5"/>
+
+    <!-- 볼터치 -->
+    <ellipse cx="272" cy="512" rx="36" ry="24" fill="#F5B7B2" opacity="0.45"/>
+    <ellipse cx="528" cy="512" rx="36" ry="24" fill="#F5B7B2" opacity="0.45"/>
+
+    <!-- 코 -->
+    <path d="M 388 498 C 396 508, 406 508, 414 500" fill="none" stroke="#F3CCB4"
+          stroke-width="6" stroke-linecap="round"/>
+
+    <!-- 살짝 벌린 입 -->
+    <ellipse cx="400" cy="552" rx="23" ry="18" fill="#D98079"/>
+    <ellipse cx="400" cy="558" rx="14" ry="9" fill="#C4675F" opacity="0.65"/>
+
+    <!-- 담요 밖으로 빼꼼 나온 주먹 -->
+    <g transform="translate(598,614)">
+      <circle cx="0" cy="0" r="54" fill="#FBE0CD"/>
+      <g fill="none" stroke="#F3CCB4" stroke-width="5" stroke-linecap="round" opacity="0.65">
+        <path d="M -40 -22 C -20 -34, 8 -36, 28 -28"/>
+        <path d="M -46 2 C -24 -8, 6 -10, 30 -2"/>
+        <path d="M -42 26 C -22 18, 6 16, 28 24"/>
+      </g>
+      <path d="M -34 -30 C -46 -14, -46 8, -36 22" fill="none" stroke="#F3CCB4"
+            stroke-width="5" stroke-linecap="round" opacity="0.5"/>
+    </g>
+
+    <!-- 거즈 과일 무늬 -->
+    <g transform="translate(280.2,272.0) rotate(18) scale(0.83)">
+      <path d="M -9 6 C -3 1 4 -3 11 -7" fill="none" stroke="#88A96B" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M -5 4 C -6 -2 -2 -4 0 -1 C 0 2 -3 5 -5 4 Z" fill="#9FBB8B"/>
+      <path d="M 2 -1 C 1 -7 5 -9 7 -6 C 7 -3 4 0 2 -1 Z" fill="#9FBB8B"/>
+      <path d="M -1 7 C 3 5 6 7 5 10 C 2 11 0 9 -1 7 Z" fill="#9FBB8B"/>
+    </g>
+<g transform="translate(456.4,217.7) rotate(27) scale(0.94)">
+      <path d="M -9 6 C -3 1 4 -3 11 -7" fill="none" stroke="#88A96B" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M -5 4 C -6 -2 -2 -4 0 -1 C 0 2 -3 5 -5 4 Z" fill="#9FBB8B"/>
+      <path d="M 2 -1 C 1 -7 5 -9 7 -6 C 7 -3 4 0 2 -1 Z" fill="#9FBB8B"/>
+      <path d="M -1 7 C 3 5 6 7 5 10 C 2 11 0 9 -1 7 Z" fill="#9FBB8B"/>
+    </g>
+<g transform="translate(263.8,664.6) rotate(-23) scale(1.05)">
+      <path d="M -9 6 C -3 1 4 -3 11 -7" fill="none" stroke="#88A96B" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M -5 4 C -6 -2 -2 -4 0 -1 C 0 2 -3 5 -5 4 Z" fill="#9FBB8B"/>
+      <path d="M 2 -1 C 1 -7 5 -9 7 -6 C 7 -3 4 0 2 -1 Z" fill="#9FBB8B"/>
+      <path d="M -1 7 C 3 5 6 7 5 10 C 2 11 0 9 -1 7 Z" fill="#9FBB8B"/>
+    </g>
+<g transform="translate(292.6,749.3) rotate(9) scale(0.83)">
+      <circle cx="0" cy="1" r="7.4" fill="#F2B45E"/>
+      <circle cx="-2.4" cy="-1.6" r="2.0" fill="#FFFFFF" opacity="0.4"/>
+      <path d="M 1 -6 C 5 -10 9 -10 10 -8 C 9 -5 5 -4 1 -6 Z" fill="#9FBB8B"/>
+    </g>
+<g transform="translate(579.9,529.5) rotate(-8) scale(0.92)">
+      <circle cx="0" cy="1" r="7.4" fill="#F2B45E"/>
+      <circle cx="-2.4" cy="-1.6" r="2.0" fill="#FFFFFF" opacity="0.4"/>
+      <path d="M 1 -6 C 5 -10 9 -10 10 -8 C 9 -5 5 -4 1 -6 Z" fill="#9FBB8B"/>
+    </g>
+<g transform="translate(397.7,666.1) rotate(25) scale(1.07)">
+      <path d="M -4 -3 C -3 -11 2 -14 6 -15" fill="none" stroke="#88A96B" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M 5 -1 C 6 -8 7 -12 6 -15" fill="none" stroke="#88A96B" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="-5" cy="1" r="5.6" fill="#E4726A"/>
+      <circle cx="6" cy="3" r="5.0" fill="#E4726A"/>
+      <circle cx="-6.6" cy="-0.6" r="1.5" fill="#FFFFFF" opacity="0.45"/>
+    </g>
+<g transform="translate(500.0,785.8) rotate(-6) scale(0.91)">
+      <circle cx="0" cy="1" r="7.4" fill="#F2B45E"/>
+      <circle cx="-2.4" cy="-1.6" r="2.0" fill="#FFFFFF" opacity="0.4"/>
+      <path d="M 1 -6 C 5 -10 9 -10 10 -8 C 9 -5 5 -4 1 -6 Z" fill="#9FBB8B"/>
+    </g>
+<g transform="translate(217.7,322.3) rotate(-18) scale(1.07)">
+      <circle cx="0" cy="1" r="7.4" fill="#F2B45E"/>
+      <circle cx="-2.4" cy="-1.6" r="2.0" fill="#FFFFFF" opacity="0.4"/>
+      <path d="M 1 -6 C 5 -10 9 -10 10 -8 C 9 -5 5 -4 1 -6 Z" fill="#9FBB8B"/>
+    </g>
+<g transform="translate(505.4,631.3) rotate(16) scale(1.09)">
+      <circle cx="0" cy="1" r="7.4" fill="#F2B45E"/>
+      <circle cx="-2.4" cy="-1.6" r="2.0" fill="#FFFFFF" opacity="0.4"/>
+      <path d="M 1 -6 C 5 -10 9 -10 10 -8 C 9 -5 5 -4 1 -6 Z" fill="#9FBB8B"/>
+    </g>
+<g transform="translate(419.1,776.9) rotate(-13) scale(1.03)">
+      <path d="M -4 -3 C -3 -11 2 -14 6 -15" fill="none" stroke="#88A96B" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M 5 -1 C 6 -8 7 -12 6 -15" fill="none" stroke="#88A96B" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="-5" cy="1" r="5.6" fill="#E4726A"/>
+      <circle cx="6" cy="3" r="5.0" fill="#E4726A"/>
+      <circle cx="-6.6" cy="-0.6" r="1.5" fill="#FFFFFF" opacity="0.45"/>
+    </g>
+<g transform="translate(589.8,381.1) rotate(16) scale(1.00)">
+      <path d="M -4 -3 C -3 -11 2 -14 6 -15" fill="none" stroke="#88A96B" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M 5 -1 C 6 -8 7 -12 6 -15" fill="none" stroke="#88A96B" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="-5" cy="1" r="5.6" fill="#E4726A"/>
+      <circle cx="6" cy="3" r="5.0" fill="#E4726A"/>
+      <circle cx="-6.6" cy="-0.6" r="1.5" fill="#FFFFFF" opacity="0.45"/>
+    </g>
+<g transform="translate(575.7,299.0) rotate(13) scale(1.07)">
+      <path d="M -4 -3 C -3 -11 2 -14 6 -15" fill="none" stroke="#88A96B" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M 5 -1 C 6 -8 7 -12 6 -15" fill="none" stroke="#88A96B" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="-5" cy="1" r="5.6" fill="#E4726A"/>
+      <circle cx="6" cy="3" r="5.0" fill="#E4726A"/>
+      <circle cx="-6.6" cy="-0.6" r="1.5" fill="#FFFFFF" opacity="0.45"/>
+    </g>
+<g transform="translate(214.2,495.8) rotate(27) scale(1.04)">
+      <circle cx="0" cy="1" r="7.4" fill="#F2B45E"/>
+      <circle cx="-2.4" cy="-1.6" r="2.0" fill="#FFFFFF" opacity="0.4"/>
+      <path d="M 1 -6 C 5 -10 9 -10 10 -8 C 9 -5 5 -4 1 -6 Z" fill="#9FBB8B"/>
+    </g>
+<g transform="translate(195.5,722.3) rotate(-9) scale(1.06)">
+      <circle cx="0" cy="1" r="7.4" fill="#F2B45E"/>
+      <circle cx="-2.4" cy="-1.6" r="2.0" fill="#FFFFFF" opacity="0.4"/>
+      <path d="M 1 -6 C 5 -10 9 -10 10 -8 C 9 -5 5 -4 1 -6 Z" fill="#9FBB8B"/>
+    </g>
+<g transform="translate(604.6,772.7) rotate(14) scale(0.96)">
+      <circle cx="0" cy="1" r="7.4" fill="#F2B45E"/>
+      <circle cx="-2.4" cy="-1.6" r="2.0" fill="#FFFFFF" opacity="0.4"/>
+      <path d="M 1 -6 C 5 -10 9 -10 10 -8 C 9 -5 5 -4 1 -6 Z" fill="#9FBB8B"/>
+    </g>
+<g transform="translate(367.5,197.0) rotate(6) scale(0.95)">
+      <path d="M -4 -3 C -3 -11 2 -14 6 -15" fill="none" stroke="#88A96B" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M 5 -1 C 6 -8 7 -12 6 -15" fill="none" stroke="#88A96B" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="-5" cy="1" r="5.6" fill="#E4726A"/>
+      <circle cx="6" cy="3" r="5.0" fill="#E4726A"/>
+      <circle cx="-6.6" cy="-0.6" r="1.5" fill="#FFFFFF" opacity="0.45"/>
+    </g>
+<g transform="translate(536.3,234.6) rotate(-18) scale(1.06)">
+      <path d="M -4 -3 C -3 -11 2 -14 6 -15" fill="none" stroke="#88A96B" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M 5 -1 C 6 -8 7 -12 6 -15" fill="none" stroke="#88A96B" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="-5" cy="1" r="5.6" fill="#E4726A"/>
+      <circle cx="6" cy="3" r="5.0" fill="#E4726A"/>
+      <circle cx="-6.6" cy="-0.6" r="1.5" fill="#FFFFFF" opacity="0.45"/>
+    </g>
+<g transform="translate(610.3,696.1) rotate(-17) scale(1.04)">
+      <path d="M -4 -3 C -3 -11 2 -14 6 -15" fill="none" stroke="#88A96B" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M 5 -1 C 6 -8 7 -12 6 -15" fill="none" stroke="#88A96B" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="-5" cy="1" r="5.6" fill="#E4726A"/>
+      <circle cx="6" cy="3" r="5.0" fill="#E4726A"/>
+      <circle cx="-6.6" cy="-0.6" r="1.5" fill="#FFFFFF" opacity="0.45"/>
+    </g>
+<g transform="translate(191.3,402.2) rotate(-5) scale(0.83)">
+      <circle cx="0" cy="1" r="7.4" fill="#F2B45E"/>
+      <circle cx="-2.4" cy="-1.6" r="2.0" fill="#FFFFFF" opacity="0.4"/>
+      <path d="M 1 -6 C 5 -10 9 -10 10 -8 C 9 -5 5 -4 1 -6 Z" fill="#9FBB8B"/>
+    </g>
+<g transform="translate(232.5,569.9) rotate(22) scale(1.10)">
+      <path d="M -9 6 C -3 1 4 -3 11 -7" fill="none" stroke="#88A96B" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M -5 4 C -6 -2 -2 -4 0 -1 C 0 2 -3 5 -5 4 Z" fill="#9FBB8B"/>
+      <path d="M 2 -1 C 1 -7 5 -9 7 -6 C 7 -3 4 0 2 -1 Z" fill="#9FBB8B"/>
+      <path d="M -1 7 C 3 5 6 7 5 10 C 2 11 0 9 -1 7 Z" fill="#9FBB8B"/>
+    </g>
+<g transform="translate(622.4,468.7) rotate(-2) scale(0.84)">
+      <path d="M -9 6 C -3 1 4 -3 11 -7" fill="none" stroke="#88A96B" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M -5 4 C -6 -2 -2 -4 0 -1 C 0 2 -3 5 -5 4 Z" fill="#9FBB8B"/>
+      <path d="M 2 -1 C 1 -7 5 -9 7 -6 C 7 -3 4 0 2 -1 Z" fill="#9FBB8B"/>
+      <path d="M -1 7 C 3 5 6 7 5 10 C 2 11 0 9 -1 7 Z" fill="#9FBB8B"/>
+    </g>
+<g transform="translate(482.4,712.0) rotate(13) scale(0.85)">
+      <path d="M -9 6 C -3 1 4 -3 11 -7" fill="none" stroke="#88A96B" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M -5 4 C -6 -2 -2 -4 0 -1 C 0 2 -3 5 -5 4 Z" fill="#9FBB8B"/>
+      <path d="M 2 -1 C 1 -7 5 -9 7 -6 C 7 -3 4 0 2 -1 Z" fill="#9FBB8B"/>
+      <path d="M -1 7 C 3 5 6 7 5 10 C 2 11 0 9 -1 7 Z" fill="#9FBB8B"/>
+    </g>
+
+  </g>
+</svg>
